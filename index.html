@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> 3D MODEL CTT </title>
+  <title>Chuyên gia 3D Modeling</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -16,6 +17,7 @@
       background-color: #222;
       text-align: center;
       padding: 50px 20px;
+      animation: fadeIn 2s ease;
     }
     header h1 {
       font-size: 2.5rem;
@@ -29,6 +31,7 @@
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
+      animation: fadeInUp 1s ease;
     }
     section h2 {
       border-bottom: 2px solid #444;
@@ -45,6 +48,11 @@
       border: 1px solid #333;
       padding: 15px;
       border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
     }
     .project-card h3 {
       margin-top: 0;
@@ -53,6 +61,10 @@
       width: 100%;
       border-radius: 8px;
       margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+    .project-card img:hover {
+      transform: scale(1.05);
     }
     footer {
       background-color: #222;
@@ -60,13 +72,34 @@
       padding: 30px 20px;
       font-size: 0.9rem;
       color: #888;
+      animation: fadeIn 2s ease;
     }
     a {
       color: #4ea1ff;
       text-decoration: none;
+      transition: color 0.3s;
     }
     a:hover {
       text-decoration: underline;
+      color: #6fbfff;
+    }
+    .social-icons a {
+      margin-right: 15px;
+      font-size: 1.5rem;
+      color: #4ea1ff;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #6fbfff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -103,11 +136,11 @@
 
   <section>
     <h2>Liên hệ</h2>
-    <p>Email: <strong>yourname@example.com</strong></p>
-    <p>
-      <a href="https://zalo.me/0339529439" target="_blank">Zalo</a> |
-      <a href="https://facebook.com/yourpage" target="_blank">Facebook</a>
-    </p>
+    <p>Email: <strong>nguyenthang30999@gmail.com</strong></p>
+    <div class="social-icons">
+      <a href="https://zalo.me/0339529439" target="_blank" title="Zalo"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" style="width:24px; vertical-align:middle; margin-right:8px;"></a>
+      <a href="https://www.facebook.com/thang.nguyen.999767/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
   </section>
 
   <footer>
